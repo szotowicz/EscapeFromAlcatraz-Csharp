@@ -1,4 +1,4 @@
-# escape-from-alcatraz
+# EscapeFromAlcatraz-Csharp
 The project developed in C#. A puzzle game with thirty diverse levels.
 
 See screenshots (game_?.jpg).
