@@ -1,34 +1,34 @@
-					-------------------------------------
-					|	TYTU£: ESCAPE FROM ALCATRAZ		|
-					|	AUTOR: Miko³aj Szotowicz		|
-					-------------------------------------
+					----------------------------------------
+						TYTUÅ: ESCAPE FROM ALCATRAZ		
+						AUTOR: MikoÅ‚aj Szotowicz		
+					----------------------------------------
 ___________________________________________________________________________________________	
 
 AGENDA:
 1) opis
-2) poziom trudnoœci
+2) poziom trudnoÅ›ci
 3) zapis gry
 4) grafika
 5) wykonanie
 
 
 1. OPIS:
-"Escape from Alcatraz" to gra logiczna, w której wcielamy siê w postaæ wiêŸnia. Naszym celem jest przesuwanie kluczy w taki sposób, aby wszystkie znajdowa³y siê na k³ódce. Dopiero wtedy otwarte zostaj¹ drzwi do kolejnego pomieszczenia.
+"Escape from Alcatraz" to gra logiczna, w ktÃ³rej wcielamy siÄ™ w postaÄ‡ wiÄ™Åºnia. Naszym celem jest przesuwanie kluczy w taki sposÃ³b, aby wszystkie znajdowaÅ‚y siÄ™ na kÅ‚Ã³dce. Dopiero wtedy otwarte zostajÄ… drzwi do kolejnego pomieszczenia.
 
-2. POZIOM TRUDNOŒCI:
-Gra oferuje 30 zró¿nicowanych poziomów trudnoœci (pomieszczeñ). Liczba kluczy oraz trudnoœæ wzrasta wraz z kolejnymi poziomami.
+2. POZIOM TRUDNOÅšCI:
+Gra oferuje 30 zrÃ³Å¼nicowanych poziomÃ³w trudnoÅ›ci (pomieszczeÅ„). Liczba kluczy oraz trudnoÅ›Ä‡ wzrasta wraz z kolejnymi poziomami.
 
 3. ZAPIS GRY:
-Gra zapamiêtuje aktualnie rozgrywany poziom. W razie celowego/niecelowego wy³¹czenia gry mo¿liwe jest rozpoczêcie rozgrywki od pomieszczenia, w którym skoñczyliœmy. Ponadto w dowolnej chwili mo¿emy powtórzyæ odblokowany wczeœniej poziom.
+Gra zapamiÄ™tuje aktualnie rozgrywany poziom. W razie celowego/niecelowego wyÅ‚Ä…czenia gry moÅ¼liwe jest rozpoczÄ™cie rozgrywki od pomieszczenia, w ktÃ³rym skoÅ„czyliÅ›my. Ponadto w dowolnej chwili moÅ¼emy powtÃ³rzyÄ‡ odblokowany wczeÅ›niej poziom.
 
 4. GRAFIKA:
 Aplikacja wykorzystuje pliki graficzne w formacie PNG.
 
 5. WYKONANIE:
-Stronê graficzn¹, dewelopersk¹, jak i projektem poszczególnych poziomów zaj¹³em siê osobiœcie. Wykorzystane zosta³y grafiki czêstokroæ z domen publicznych, jednak i tak ka¿dorazowo zosta³y one zmienione i przetworzone na potrzeby projektu.
+StronÄ™ graficznÄ…, deweloperskÄ…, jak i projektem poszczegÃ³lnych poziomÃ³w zajÄ…Å‚em siÄ™ osobiÅ›cie. Wykorzystane zostaÅ‚y grafiki czÄ™stokroÄ‡ z domen publicznych, jednak i tak kaÅ¼dorazowo zostaÅ‚y one zmienione i przetworzone na potrzeby projektu.
 
 
 ___________________________________________________________________________________________
 KONTAKT:
-	Miko³aj Szotowicz,
+	MikoÅ‚aj Szotowicz,
 	mikolaj.szotowicz@gmail.com
