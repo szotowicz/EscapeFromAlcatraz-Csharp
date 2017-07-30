@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form2
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -323,7 +323,7 @@
             // RestartLvlButton
             // 
             this.RestartLvlButton.BackColor = System.Drawing.Color.Transparent;
-            this.RestartLvlButton.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.restartLevelPIC;
+            this.RestartLvlButton.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.reStartLevelPIC;
             this.RestartLvlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RestartLvlButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RestartLvlButton.FlatAppearance.BorderSize = 0;
@@ -1498,7 +1498,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form2
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1509,9 +1509,9 @@
             this.Controls.Add(this.RestartLvlButton);
             this.Controls.Add(this.CurrentLevelLabel);
             this.Controls.Add(this.BackFromGame2MenuButton);
-            this.Name = "Form2";
+            this.Name = "GameForm";
             this.Text = "ESCAPE FROM ALCATRAZ";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameForm_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
             this.PrisonMapPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox128)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox127)).EndInit();

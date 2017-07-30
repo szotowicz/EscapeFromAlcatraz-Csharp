@@ -1,0 +1,34 @@
+					-------------------------------------
+					|	TYTU£: ESCAPE FROM ALCATRAZ		|
+					|	AUTOR: Miko³aj Szotowicz		|
+					-------------------------------------
+___________________________________________________________________________________________	
+
+AGENDA:
+1) Opis
+2) Realizacja wymagañ
+3) Film prezentacyjny
+
+
+1. OPIS:
+"Escape from Alcatraz" to gra logiczna, w której wcielamy siê w postaæ wiêŸnia. 
+Naszym celem jest przesuwanie kluczy w taki sposób, aby wszystkie znajdowa³y siê 
+na k³ódce. Dopiero wtedy otwarte zostaj¹ drzwi do kolejnego pomieszczenia.
+
+2. REALIZACJA WYMAGAÑ:
+Wszystkie zamierzone wymagania zosta³y spe³nione:
+	- 30 zró¿nicowanych pomieszczeñ (pod wzglêdem poziomu trudnoœci i liczby kluczy),
+	- ³atwa edycja istniej¹cych pomieszczeñ,
+	- odblokowywanie kolejnych pomieszczeñ,
+	- mo¿liwoœæ rêcznego wyboru pomieszczeñ (spoœród wczeœniej odblokowanych),
+	- zapamiêtywanie aktualnego rozgrywanego pomieszczenia i ³atwy powrót do rozgrywki,
+	- responsywny uk³ad elementów graficznych pozwalaj¹cy na prawid³owe wyœwietlanie w ka¿dych warunkach
+
+3. FILM PREZENTACYJNY:
+https://youtu.be/0JuQk017qZA
+
+___________________________________________________________________________________________
+KONTAKT:
+	Miko³aj Szotowicz,
+	mikolaj.szotowicz@gmail.com
+	

@@ -18,3 +18,14 @@ C:\Users\Mikołaj\Desktop\EscapeFromAlcatraz\WindowsFormsApplication1\obj\Debug\
 C:\Users\Mikołaj\Desktop\EscapeFromAlcatraz\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
 C:\Users\Mikołaj\Desktop\EscapeFromAlcatraz\WindowsFormsApplication1\obj\Debug\EscapeFromAlcatraz.csprojResolveAssemblyReference.cache
 C:\Users\Mikołaj\Desktop\EscapeFromAlcatraz\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SelectLevelForm.resources
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\EscapeFromAlcatraz.csprojResolveAssemblyReference.cache
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MenuForm.resources
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SelectLevelForm.resources
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\EscapeFromAlcatraz.csproj.GenerateResource.Cache
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Mikołaj\Documents\GitHub\AkademiaC\EscapeFromAlcatraz-Csharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.GameForm.resources

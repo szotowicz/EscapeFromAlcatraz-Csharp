@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
             
 
             this.Close();
-            thread = new Thread(openNewFormWithGame);
+            thread = new Thread(OpenNewFormWithGame);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
 
@@ -104,18 +104,18 @@ namespace WindowsFormsApplication1
             }
 
             this.Close();
-            thread = new Thread(openNewFormWithGame);
+            thread = new Thread(OpenNewFormWithGame);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
 
         }
 
-        private void openNewFormWithGame(object obj)
+        private void OpenNewFormWithGame(object obj)
         {
-            Application.Run(new Form2());
+            Application.Run(new GameForm());
         }
 
-        private void openNewFormWithSelectLevel(object obj)
+        private void OpenNewFormWithSelectLevel(object obj)
         {
             Application.Run(new SelectLevelForm());
         }
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
         private void SelectLevelButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            thread = new Thread(openNewFormWithSelectLevel);
+            thread = new Thread(OpenNewFormWithSelectLevel);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }

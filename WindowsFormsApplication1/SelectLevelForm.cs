@@ -73,25 +73,25 @@ namespace WindowsFormsApplication1
         private void BackFromSelectLvl2MenuButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            thread = new Thread(openNewFormWithMenu);
+            thread = new Thread(OpenNewFormWithMenu);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
 
-        private void openNewFormWithMenu(object obj)
+        private void OpenNewFormWithMenu(object obj)
         {
             Application.Run(new MenuForm());
         }
 
-        private void openNewFormWithGame(object obj)
+        private void OpenNewFormWithGame(object obj)
         {
-            Application.Run(new Form2());
+            Application.Run(new GameForm());
         }
 
-        private void runLevel()
+        private void RunLevel()
         {
             this.Close();
-            thread = new Thread(openNewFormWithGame);
+            thread = new Thread(OpenNewFormWithGame);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "1");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "2");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "3");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "4");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "5");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "6");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "7");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "8");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "9");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "10");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "11");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "12");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "13");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "14");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "15");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "16");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -229,7 +229,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "17");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "18");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -245,7 +245,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "19");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "20");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -261,7 +261,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "21");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button22_Click(object sender, EventArgs e)
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "22");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -277,7 +277,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "23");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -285,7 +285,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "24");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -293,7 +293,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "25");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -301,7 +301,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "26");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -309,7 +309,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "27");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button28_Click(object sender, EventArgs e)
@@ -317,7 +317,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "28");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button29_Click(object sender, EventArgs e)
@@ -325,7 +325,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "29");
 
-            runLevel();
+            RunLevel();
         }
 
         private void button30_Click(object sender, EventArgs e)
@@ -333,7 +333,7 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             System.IO.File.WriteAllText(path, "30");
 
-            runLevel();
+            RunLevel();
         }
     }
 }

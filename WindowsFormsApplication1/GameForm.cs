@@ -13,7 +13,7 @@ using System.Media;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form2 : Form
+    public partial class GameForm : Form
     {
         Thread thread;
         char[,] prison = new char[Constants.MATRIX_H, Constants.MATRIX_W];
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
         int exitX;
         int exitY;
 
-        public Form2()
+        public GameForm()
         {
             InitializeComponent();
             KeyPreview = true;
@@ -47,10 +47,10 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             string level = System.IO.File.ReadAllText(path);
             
-            startLevel(level);
+            StartLevel(level);
 
         }
-        private void startLevel(string level)
+        private void StartLevel(string level)
         {
             locks_count = 0;
             keys_count = 0;
@@ -122,19 +122,19 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            displayPrison(boxes);
+            DisplayPrison(boxes);
         }
 
         private void BackFromGame2MenuButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            thread = new Thread(openNewFormWithMenu);
+            thread = new Thread(OpenNewFormWithMenu);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
 
         }
 
-        private void displayPrison(PictureBox[] boxes)
+        private void DisplayPrison(PictureBox[] boxes)
         {
             int counter = 0;
             for (int i = 0; i < Constants.MATRIX_H; i++)
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void openNewFormWithMenu(object obj)
+        private void OpenNewFormWithMenu(object obj)
         {
             Application.Run(new MenuForm());
         }
@@ -190,30 +190,30 @@ namespace WindowsFormsApplication1
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             string level = System.IO.File.ReadAllText(path);
 
-            startLevel(level);
+            StartLevel(level);
         }
-
-        private void gameForm_KeyDown(object sender, KeyEventArgs e)
+        
+        private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W)
             {
-                moveItems('W');
+                MoveItems('W');
             }
             else if (e.KeyCode == Keys.S)
             {
-                moveItems('S');
+                MoveItems('S');
             }
             else if (e.KeyCode == Keys.A)
             {
-                moveItems('A');
+                MoveItems('A');
             }
             else if (e.KeyCode == Keys.D)
             {
-                moveItems('D');
+                MoveItems('D');
             }
         }
-
-        private void moveItems(char direction)
+        
+        private void MoveItems(char direction)
         {
             PictureBox[] boxes = {
               pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10,
@@ -236,83 +236,83 @@ namespace WindowsFormsApplication1
             if (direction == 'W')
             {
                 if (prisonerX == exitX && prisonerY == exitY && exitY == 0)
-                    nextLevel();
+                    NextLevel();
                 if ((prison[prisonerY - 1, prisonerX] == 'k' || prison[prisonerY - 1, prisonerX] == 'K') && (prison[prisonerY - 2, prisonerX] == 'l' || prison[prisonerY - 2, prisonerX] == 'g'))
                 {
                     prison[prisonerY - 1, prisonerX] = 'g';
                     prison[prisonerY - 2, prisonerX] = 'k';
 
-                    setLocationKey(getIdKey(prisonerY - 1, prisonerX), prisonerY - 2, prisonerX);
+                    SetLocationKey(GetIdKey(prisonerY - 1, prisonerX), prisonerY - 2, prisonerX);
                     haveKey = true;
                 }
                 if (prison[prisonerY - 1, prisonerX] == 'g' || prison[prisonerY - 1, prisonerX] == 'l')
                 {
-                    movePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
-                    setLocationPrisoner(prisonerY - 1, prisonerX);
+                    MovePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
+                    SetLocationPrisoner(prisonerY - 1, prisonerX);
                 }
             }
             else if (direction == 'S')
             {
                 if (prisonerX == exitX && prisonerY == exitY && exitY == Constants.MATRIX_H - 1)
-                    nextLevel();
+                    NextLevel();
                 if ((prison[prisonerY + 1, prisonerX] == 'k' || prison[prisonerY + 1, prisonerX] == 'K') && (prison[prisonerY + 2, prisonerX] == 'l' || prison[prisonerY + 2, prisonerX] == 'g'))
                 {
                     prison[prisonerY + 1, prisonerX] = 'g';
                     prison[prisonerY + 2, prisonerX] = 'k';
 
-                    setLocationKey(getIdKey(prisonerY + 1, prisonerX), prisonerY + 2, prisonerX);
+                    SetLocationKey(GetIdKey(prisonerY + 1, prisonerX), prisonerY + 2, prisonerX);
                     haveKey = true;
                 }
                 if (prison[prisonerY + 1, prisonerX] == 'g' || prison[prisonerY + 1, prisonerX] == 'l' )
                 {
-                    movePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
-                    setLocationPrisoner(prisonerY + 1, prisonerX);
+                    MovePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
+                    SetLocationPrisoner(prisonerY + 1, prisonerX);
                 }
             }
             else if (direction == 'A')
             {
                 if (prisonerX == exitX && prisonerY == exitY && exitX == 0)
-                    nextLevel();
+                    NextLevel();
                 if ((prison[prisonerY, prisonerX - 1] == 'k' || prison[prisonerY, prisonerX - 1] == 'K') && (prison[prisonerY, prisonerX - 2] == 'l' || prison[prisonerY, prisonerX - 2] == 'g'))
                 {
                     prison[prisonerY, prisonerX - 1] = 'g';
                     prison[prisonerY, prisonerX - 2] = 'k';
 
-                    setLocationKey(getIdKey(prisonerY, prisonerX - 1), prisonerY, prisonerX - 2);
+                    SetLocationKey(GetIdKey(prisonerY, prisonerX - 1), prisonerY, prisonerX - 2);
                     haveKey = true;
                 }
                 if (prison[prisonerY, prisonerX - 1] == 'g' || prison[prisonerY, prisonerX - 1] == 'l' )
                 {
-                    movePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
-                    setLocationPrisoner(prisonerY, prisonerX - 1);
+                    MovePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
+                    SetLocationPrisoner(prisonerY, prisonerX - 1);
                 }
             }
             else if (direction == 'D')
             {
                 if (prisonerX == exitX && prisonerY == exitY && exitX == Constants.MATRIX_W - 1)
-                    nextLevel();
+                    NextLevel();
                 if ((prison[prisonerY, prisonerX + 1] == 'k' || prison[prisonerY, prisonerX + 1] == 'K') && (prison[prisonerY, prisonerX + 2] == 'l' || prison[prisonerY, prisonerX + 2] == 'g'))
                 {
                     prison[prisonerY, prisonerX + 1] = 'g';
                     prison[prisonerY, prisonerX + 2] = 'k';
 
-                    setLocationKey(getIdKey(prisonerY, prisonerX + 1), prisonerY, prisonerX + 2);
+                    SetLocationKey(GetIdKey(prisonerY, prisonerX + 1), prisonerY, prisonerX + 2);
                     haveKey = true;
                 }
                 if (prison[prisonerY, prisonerX + 1] == 'g' || prison[prisonerY, prisonerX + 1] == 'l')
                 {
-                    movePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
-                    setLocationPrisoner(prisonerY, prisonerX + 1);
+                    MovePrisoner(prisonerY * Constants.MATRIX_W + prisonerX, direction, boxes, haveKey);
+                    SetLocationPrisoner(prisonerY, prisonerX + 1);
                 }
             }
             if (prisonerX != exitX)
-                checkWin();
-            showLock();
-            displayPrison(boxes);
+                CheckWin();
+            ShowLock();
+            DisplayPrison(boxes);
            
         }
 
-        private void movePrisoner(int which, char direction, PictureBox[] boxes, bool haveKey)
+        private void MovePrisoner(int which, char direction, PictureBox[] boxes, bool haveKey)
         {
             if (direction == 'W')
             {
@@ -326,16 +326,16 @@ namespace WindowsFormsApplication1
                     boxes[which].BringToFront();
                     boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE - (Constants.DISTANCE_TO_MOVE * i));
                     Thread.Sleep(Constants.TIME_TO_MOVE);
-
                 }
+
                 prison[prisonerY, prisonerX] = 'g';
                 prison[prisonerY - 1, prisonerX] = 'p';
-                displayPrison(boxes);
+                DisplayPrison(boxes);
                 if (haveKey)
                     boxes[which - Constants.MATRIX_W].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, (prisonerY - 1) * Constants.IMG_SIZE);
                 boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
             }
-            if (direction == 'S')
+            else if (direction == 'S')
             {
                 for (int i = 0; i < Constants.NUMBER_OF_STEPS; i++)
                 {
@@ -346,18 +346,17 @@ namespace WindowsFormsApplication1
                     }
                     boxes[which].BringToFront();
                     boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE + (Constants.DISTANCE_TO_MOVE * i));
-                    
                     Thread.Sleep(Constants.TIME_TO_MOVE);
-
                 }
+
                 prison[prisonerY, prisonerX] = 'g';
                 prison[prisonerY + 1, prisonerX] = 'p';
-                displayPrison(boxes);
+                DisplayPrison(boxes);
                 if(haveKey)
                     boxes[which + Constants.MATRIX_W].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, (prisonerY + 1) * Constants.IMG_SIZE);
                 boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
             }
-            if(direction == 'A')
+            else if(direction == 'A')
             {
                 for (int i = 0; i < Constants.NUMBER_OF_STEPS; i++)
                 {
@@ -370,14 +369,15 @@ namespace WindowsFormsApplication1
                     boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE - (Constants.DISTANCE_TO_MOVE * i), prisonerY * Constants.IMG_SIZE);
                     Thread.Sleep(Constants.TIME_TO_MOVE);
                 }
+
                 prison[prisonerY, prisonerX] = 'g';
                 prison[prisonerY, prisonerX - 1] = 'p';
-                displayPrison(boxes);
+                DisplayPrison(boxes);
                 if (haveKey)
                     boxes[which - 1].Location = new System.Drawing.Point((prisonerX - 1) * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
                 boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
             }
-            if (direction == 'D')
+            else if (direction == 'D')
             {
                 for (int i = 0; i < Constants.NUMBER_OF_STEPS; i++)
                 {
@@ -389,19 +389,18 @@ namespace WindowsFormsApplication1
                     boxes[which].BringToFront();
                     boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE + (Constants.DISTANCE_TO_MOVE * i), prisonerY * Constants.IMG_SIZE);
                     Thread.Sleep(Constants.TIME_TO_MOVE);
-
                 }
+                
                 prison[prisonerY, prisonerX] = 'g';
                 prison[prisonerY, prisonerX + 1] = 'p';
-                displayPrison(boxes);
+                DisplayPrison(boxes);
                 if (haveKey)
                     boxes[which + 1].Location = new System.Drawing.Point((prisonerX + 1) * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
                 boxes[which].Location = new System.Drawing.Point(prisonerX * Constants.IMG_SIZE, prisonerY * Constants.IMG_SIZE);
             }
-            
         }
 
-        private void checkWin()
+        private void CheckWin()
         {
             int win = 0;
             for (int i = 0; i < locks_count; i+=2)
@@ -424,7 +423,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void showLock()
+        private void ShowLock()
         {
             for (int i = 0; i < locks_count; i += 2)
             {
@@ -447,7 +446,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public void nextLevel()
+        private void NextLevel()
         {
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
             string pathSelectLevel = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/maxLevel.txt");
@@ -457,7 +456,7 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("Congratulations! You escaped from prison!");
                 this.Close();
-                thread = new Thread(openNewFormWithMenu);
+                thread = new Thread(OpenNewFormWithMenu);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
             }
@@ -470,11 +469,11 @@ namespace WindowsFormsApplication1
                     System.IO.File.WriteAllText(pathSelectLevel, (Int32.Parse(level) + 1).ToString());
 
                 level = System.IO.File.ReadAllText(path);
-                startLevel(level);
+                StartLevel(level);
             }
         }
 
-        public int getIdKey(int y, int x)
+        private int GetIdKey(int y, int x)
         {
             for (int i = 0; i < keys_count; i++)
             {
@@ -484,13 +483,13 @@ namespace WindowsFormsApplication1
             return 0;
         }
 
-        public void setLocationKey(int id, int y, int x)
+        private void SetLocationKey(int id, int y, int x)
         {
             keys[id].X = x;
             keys[id].Y = y;
         }
 
-        public void setLocationPrisoner(int y, int x)
+        private void SetLocationPrisoner(int y, int x)
         {
             prisonerX = x;
             prisonerY = y;

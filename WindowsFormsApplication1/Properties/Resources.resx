@@ -133,8 +133,8 @@
   <data name="exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restartLevelPIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\restartLevelPIC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reStartLevelPIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\reStartLevelPIC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prisoner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\prisoner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

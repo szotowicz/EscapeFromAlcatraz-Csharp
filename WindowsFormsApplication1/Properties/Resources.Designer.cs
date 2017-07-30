@@ -243,9 +243,9 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap restartLevelPIC {
+        internal static System.Drawing.Bitmap reStartLevelPIC {
             get {
-                object obj = ResourceManager.GetObject("restartLevelPIC", resourceCulture);
+                object obj = ResourceManager.GetObject("reStartLevelPIC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

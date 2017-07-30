@@ -39,7 +39,5 @@ namespace WindowsFormsApplication1
         public const int TIME_TO_MOVE = 20;
         public const int DISTANCE_TO_MOVE = 14;
         public const int NUMBER_OF_STEPS = 5;
-
-
     }
 }
