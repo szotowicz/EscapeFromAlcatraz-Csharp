@@ -4,10 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -24,46 +21,50 @@ namespace WindowsFormsApplication1
             WindowState = FormWindowState.Maximized;
             TopMost = true;
 
+            SetElementsOnTheForm();
+        }
+
+        private void SetElementsOnTheForm()
+        {
             //MAIN MENU PANEL
             MainMenuPanel.Location = new System.Drawing.Point(0, 0);
             MainMenuPanel.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
             nameOfGamePic.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - nameOfGamePic.Size.Width / 2, (Screen.PrimaryScreen.Bounds.Height / 2) - 350);
 
-            ResumeGameButton.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            ResumeGameButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - ResumeGameButton.Size.Width / 2, Constants.MENU_BUTTON_MARGIN_UP);
+            ResumeGameButton.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            ResumeGameButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - ResumeGameButton.Size.Width / 2, Constants.MenuButtonMarginUp);
 
-            NewGameButton.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            NewGameButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - NewGameButton.Size.Width / 2, Constants.MENU_BUTTON_MARGIN_UP + Constants.MENU_BUTTON_MARGIN_BETWEEN_BUTTONS * 1);
+            NewGameButton.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            NewGameButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - NewGameButton.Size.Width / 2, Constants.MenuButtonMarginUp + Constants.MenuButtonMarginBeetweenButtons * 1);
 
-            SelectLevelButton.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            SelectLevelButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - NewGameButton.Size.Width / 2, Constants.MENU_BUTTON_MARGIN_UP + Constants.MENU_BUTTON_MARGIN_BETWEEN_BUTTONS * 2);
-            
-            OptionsButton.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            OptionsButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - OptionsButton.Size.Width / 2, Constants.MENU_BUTTON_MARGIN_UP + Constants.MENU_BUTTON_MARGIN_BETWEEN_BUTTONS * 3);
-            
-            ExitButton.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            ExitButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - ExitButton.Size.Width / 2, Constants.MENU_BUTTON_MARGIN_UP + Constants.MENU_BUTTON_MARGIN_BETWEEN_BUTTONS * 4);
+            SelectLevelButton.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            SelectLevelButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - NewGameButton.Size.Width / 2, Constants.MenuButtonMarginUp + Constants.MenuButtonMarginBeetweenButtons * 2);
+
+            OptionsButton.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            OptionsButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - OptionsButton.Size.Width / 2, Constants.MenuButtonMarginUp + Constants.MenuButtonMarginBeetweenButtons * 3);
+
+            ExitButton.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            ExitButton.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width / 2) - ExitButton.Size.Width / 2, Constants.MenuButtonMarginUp + Constants.MenuButtonMarginBeetweenButtons * 4);
 
             // OPTIONS PANEL
             OptionsPanel.Location = new System.Drawing.Point(0, 0);
             OptionsPanel.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            AboutGameButton.Size = new System.Drawing.Size(Constants.OPTIONS_BUTTON_WIDTH, Constants.OPTIONS_BUTTON_HEIGHT);
-            AboutGameButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OPTIONS_PIC_WIDTH + Constants.OPTIONS_BUTTON_WIDTH) / 2, Constants.MARGIN_OPTIONS_UP);
-            
-            AboutAuthorButton.Size = new System.Drawing.Size(Constants.OPTIONS_BUTTON_WIDTH, Constants.OPTIONS_BUTTON_HEIGHT);
-            AboutAuthorButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OPTIONS_PIC_WIDTH + Constants.OPTIONS_BUTTON_WIDTH) / 2, Constants.MARGIN_OPTIONS_UP + AboutAuthorButton.Height);
+            AboutGameButton.Size = new System.Drawing.Size(Constants.OptionsButtonWidth, Constants.OptionsButtonHeight);
+            AboutGameButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OptionsPicWidth + Constants.OptionsButtonWidth) / 2, Constants.MarginOptionsUp);
 
-            ControlButton.Size = new System.Drawing.Size(Constants.OPTIONS_BUTTON_WIDTH, Constants.OPTIONS_BUTTON_HEIGHT);
-            ControlButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OPTIONS_PIC_WIDTH + Constants.OPTIONS_BUTTON_WIDTH) / 2, Constants.MARGIN_OPTIONS_UP + 2 * ControlButton.Height);
+            AboutAuthorButton.Size = new System.Drawing.Size(Constants.OptionsButtonWidth, Constants.OptionsButtonHeight);
+            AboutAuthorButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OptionsPicWidth + Constants.OptionsButtonWidth) / 2, Constants.MarginOptionsUp + AboutAuthorButton.Height);
 
-            OptionsPictures.Size = new System.Drawing.Size(Constants.OPTIONS_PIC_WIDTH, Constants.OPTIONS_PIC_HEIGHT);
-            OptionsPictures.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OPTIONS_PIC_WIDTH + Constants.OPTIONS_BUTTON_WIDTH) / 2 + Constants.OPTIONS_BUTTON_WIDTH, Constants.MARGIN_OPTIONS_UP);
+            ControlButton.Size = new System.Drawing.Size(Constants.OptionsButtonWidth, Constants.OptionsButtonHeight);
+            ControlButton.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OptionsPicWidth + Constants.OptionsButtonWidth) / 2, Constants.MarginOptionsUp + 2 * ControlButton.Height);
 
-            BackFromOptionsToMenu.Size = new System.Drawing.Size(Constants.MENU_BUTTON_WIDTH, Constants.MENU_BUTTON_HEIGHT);
-            BackFromOptionsToMenu.Location = new System.Drawing.Point(Constants.MARGIN_BACK2MENU, Screen.PrimaryScreen.Bounds.Height - (BackFromOptionsToMenu.Height + Constants.MARGIN_BACK2MENU));
+            OptionsPictures.Size = new System.Drawing.Size(Constants.OptionsPicWidth, Constants.OptionsPicHeight);
+            OptionsPictures.Location = new System.Drawing.Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Constants.OptionsPicWidth + Constants.OptionsButtonWidth) / 2 + Constants.OptionsButtonWidth, Constants.MarginOptionsUp);
 
+            BackFromOptionsToMenu.Size = new System.Drawing.Size(Constants.MenuButtonWidth, Constants.MenuButtonHeight);
+            BackFromOptionsToMenu.Location = new System.Drawing.Point(Constants.MarginBack2Menu, Screen.PrimaryScreen.Bounds.Height - (BackFromOptionsToMenu.Height + Constants.MarginBack2Menu));
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -86,14 +87,12 @@ namespace WindowsFormsApplication1
         private void NewGameButton_Click(object sender, EventArgs e)
         {
             string path = Path.Combine(Path.GetDirectoryName(Environment.CurrentDirectory), @"Lib/level.txt");
-            System.IO.File.WriteAllText(path, "1");
+            File.WriteAllText(path, "1");
             
-
             this.Close();
             thread = new Thread(OpenNewFormWithGame);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
-
         }
 
         private void ResumeGameButton_Click(object sender, EventArgs e)
